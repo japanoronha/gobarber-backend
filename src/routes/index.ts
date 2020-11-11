@@ -4,7 +4,6 @@ import sessionsRouter from './sessions.routes';
 import usersRouter from './users.routes';
 
 const routes = Router();
-routes.use(express.json());
 
 routes.use('/appointments', appointmentsRouter);
 routes.use('/users', usersRouter);
