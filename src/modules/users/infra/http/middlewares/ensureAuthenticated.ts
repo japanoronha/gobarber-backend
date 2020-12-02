@@ -25,11 +25,6 @@ export default function ensureAuthenticated(
   try {
     const decoded = verify(token, authConfig.jwt.secret);
 
-    console.log(
-      'Retorno do médodo verify(token, authConfig.jwt.secrect): ',
-      decoded,
-    );
-
     const { subject } = decoded as ITokenPayload;
 
     request.user = {
